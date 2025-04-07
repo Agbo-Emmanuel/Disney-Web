@@ -1,6 +1,7 @@
 import React from "react";
 import image from "./img/disney.png";
 import image2 from "./img/search.png";
+import { IoMdMenu } from "react-icons/io";
 
 
 const Header = ()=>{
@@ -31,7 +32,9 @@ const Header = ()=>{
                     </div>
                     
                 </div>
-                <div className="menu">menu</div>
+                <div className="menu">
+                    <IoMdMenu/>
+                </div>
             </div>
         </div>
     )

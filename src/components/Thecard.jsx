@@ -7,8 +7,8 @@ const Thecard = ({mov})=>{
     return(
         <div className="cardwrapper">
             {
-                data.map((props)=>(
-                    <div className="thecard">
+                data.map((props, index)=>(
+                    <div key={index} className="thecard">
                         <div className="thecardimg">
                             <img src={props.cardImg} alt=""/>
                         </div>
