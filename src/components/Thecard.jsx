@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'framer-motion'
 
 
 const Thecard = ({mov})=>{
@@ -8,7 +9,23 @@ const Thecard = ({mov})=>{
         <div className="cardwrapper">
             {
                 data.map((props, index)=>(
-                    <div key={index} className="thecard">
+                    <motion.div 
+                        initial={{
+                            opacity: 0,
+                            y: 100,
+                        }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 30,
+                            mass: 1.5,
+                        }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        viewport={{ margin: "-40px", once: true }}
+                        key={index} 
+                        className="thecard">
                         <div className="thecardimg">
                             <img src={props.cardImg} alt=""/>
                         </div>
@@ -18,7 +35,7 @@ const Thecard = ({mov})=>{
                         <div className="tag" style={{backgroundColor: props.type === "new" ? "red" : props.type === "recommend" ? "blue": props.type === "trending" ? "orange":"green"}}>
                             <p>{props.type}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))
             }
         </div>
