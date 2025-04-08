@@ -192,7 +192,7 @@ input{
 .thecardimg{
     width: 100%;
     height: 180px;
-    background-color: yellow;
+    background-color: rgb(229, 229, 229);
 }
 .thecardimg img{
     width: 100%;
